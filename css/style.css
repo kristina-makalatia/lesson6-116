@@ -62,6 +62,7 @@
 	transition-timing-function: ease-out;
 	transition-delay: 2s;*/
 	transition: all 0.5s ease-out 2s;
+	border-radius: 25px;
 }
 .child-box {
 	width: 150px;
@@ -94,18 +95,113 @@
 /*keyframe animation block*/
 .animation-image {
 	height: 80px;
-	animation: chatanimation 5s infinite 3s alternate;
-	position: absolute;
+	animation:chatanimationnew 5s infinite 3s alternate;
+	/*position: absolute;*/
 }
 .animation-block{
-	position: relative;
+	/*position: relative;*/
 	height: 150px;
 }
 
-@keyframes chatanimation {
+/*@keyframes chatanimation {
 	0% {left: 0px; transform: rotate(0deg);}
 	25% {left: 300px; transform: rotate(45deg);}
 	50% {left: 600px; transform: rotate(360deg);}
 	75% {left: 900px; transform: rotate(45deg);}
 	100% {left: 1200px;transform: rotate(0deg);}
+}*/
+
+@keyframes chatanimationnew {
+	0% { transform: translateX(0px) rotate(0deg);}
+	25% { transform:translateX(300px) rotate(45deg);}
+	50% { transform:translateX(600px) rotate(360deg);}
+	75% { transform: translateX(900px)rotate(45deg);}
+	100% {transform:translateX(1200px) rotate(0deg);}
+}
+
+
+/*pseudo elements*/
+/*.hello1::before {
+	content: 'Lesson7';
+	color: red;
+	font-size: 30px;
+}*/
+.hello1::before {
+	content: url('../images/smiley.gif');
+}
+/*.hello1::after {
+	content: '\2665';
+}*/
+.hello1::after {
+	content: ' ';
+	width: 2px;
+	height: 30px;
+	background-color: blue;
+	display: inline-block;
+	margin-left: 30px;
+}
+
+/*flexbox*/
+.wraper-flex {
+	display: flex;
+	margin-top: 100px;
+	justify-content: space-between;
+	align-items: center;
+}
+.left-block {
+	width: 400px;
+	height: 200px;
+	background-color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.right-block {
+	width: 400px;
+	height: 200px;
+	background-color: green;
+}
+
+
+/*flex examples*/
+.container-block {
+	width: 1170px;
+	margin: 0 auto;
+	background-color: pink;
+}
+.block-flex {
+	width: 371px;
+	height: 374px;
+	background-color: lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.line1 {
+	display: flex;
+	justify-content: space-between;
+}
+.icon-block {
+	width: 88px;
+	height: 88px;
+	background-color: #325DFF;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.text-block {
+	width: 250px;
+	background-color: yellow;
+	text-align: center;
+}
+.title-block {
+	width: 770px;
+	margin: 0 auto;
+	background-color: blue;
+	text-align: center;
+}
+.size {
+	margin-top: 25px;
 }
